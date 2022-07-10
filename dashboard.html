@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="./css/bootstrap.min.css">
+   <link rel="stylesheet" href="./css/dashboard.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+   <title>Sidebar/Nav</title>
+
+</head>
+<body>         
+
+   <div class="container-fluid" id="navHeader" style="padding: 0;">
+      <nav class="navbar p-4 navbar-expand-lg navbar-light align-content-center" style="background-color: #51A4F1;">
+         <button class="btn btn-primary me-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+         <form class="d-flex ms-2" role="search" style="width:50%">
+            <div class="search-bar">
+               <i class="bi bi-search"></i>
+               <input class="form-control text-light input-field" type="search" placeholder="Search data" aria-label="Search" style="background-color: #51A4F1;">
+            </div>                    
+         </form>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end pe-3" id="navbarSupportedContent">
+               <div class="navbar-nav align-items-center" >
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav mb-2 mb-lg-0 align-items-center" >
+                        <li class="nav-item">
+                           <a class="nav-link position-relative"  href="#"> <img src="./img/navMessage.png">
+                              <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger">
+                                 8
+                                 <span class="visually-hidden">unread messages</span>
+                               </span>
+                           </a>
+                        </li>
+
+                        <li class="nav-item">
+                           <a class="nav-link" href="#"><img src="./img/navNotify.png"></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src="./img/DP8.jpg" class="me-2" style="border-radius: 100%; height: 50px; width: 40px;">
+                           <p class="mb-0 me-5 text-light">Precious</p>
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Log out</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+
+         <!-- Contents of the webpage -->
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nemo consequuntur asperiores perferendis, laborum, velit dicta deleniti at soluta nobis optio aspernatur amet incidunt tempore a, sapiente dolor possimus voluptatibus.
+         </p>
+
+   </div>
+            <!-- Contains the side bar menu -->
+   <div class="offcanvas offcanvas-start " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"         id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">   
+
+      <div class="offcanvas-header">
+         <h5 class="offcanvas-title text-center" id="offcanvasScrollingLabel"> <img src="./img/dashHeliumLogo.png" class="w-100">
+         </h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+         <div id="sidebar">      
+            <div class="mt-5">
+               <h6>MAIN-MENU</h6>
+               <div class="dashContent ">                  
+                  <div class=" dashBoard d-flex align-items-center">                       
+                     <img src="./img/dashboard.png" class="me-3">                           
+                     <a href="#" class="ms-2 mb-0 ">Dashboard</a>
+                  </div>
+
+                  <br>
+
+                  <div class="sidenav">
+                     <button class="dropdown-btn d-flex align-items-center" >
+                        <img src="./img/dashRealTimeInfo.png" class="me-3">
+                     <a href="#" class="me-4 RealTimeNoHover"> Real Time Info </a>
+                        <i class="bi bi-caret-down-fill"></i>
+                     </button>
+                     <div class="dropdown-container">
+                        <a href="#" class="mb-4 mt-2">Measurement</a>
+                        <a href="#" class="mb-4">Wave Form</a>
+                        <a href="#" class="mb-4">Analytics</a>
+                        <a href="#" class="mb-4">Alarm</a>
+                        <a href="#" class="mb-4">Map</a>
+                     </div>
+                  </div>
+
+                  <br>
+               
+                  <div class=" notifications d-flex align-items-center mt-5 mb-2">
+                     <a href="#" class="position-relative"> <img src="./img/dashNotification.png" class="me-3 ms-0">   
+                        <span class="position-absolute top-0 start-0 translate-middle p-2 bg-danger border border-light rounded-circle">
+                           <span class="visually-hidden">New alerts</span>
+                         </span>                        
+                        Notifications
+                     </a>
+                  </div>
+               </div>
+              
+               <br>
+               <br>
+
+               <h6>PREFERENCES</h6>
+               <div class="dashContent">
+                  <div class=" dashUser mb-2 mt-2 d-flex align-items-center">
+                     <img src="./img/dashUser.png" class="me-3">
+                     <a href="#">User</a>
+                  </div>
+
+                  <br>
+
+                  <div class=" dashSetting d-flex align-items-center pb-5">
+                     <img src="./img/dashSetting.png" class="me-2">
+                     <a href="#">Settings</a>
+                  </div>
+               </div>
+            </div>             
+         </div>
+      </div>
+   </div>
+
+  
+   
+
+   <script src="./js/dashboard.js"></script>
+   <script src="./js/bootstrap.min.js"></script>
+   
+
+</body>
+</html>
