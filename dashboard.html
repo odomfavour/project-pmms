@@ -4,15 +4,26 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-   <link rel="stylesheet" href="./css/bootstrap.min.css">
-   <link rel="stylesheet" href="./css/dashboard.css">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <!-- Link google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <!-- Adding boostrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Adding custom css -->
+   <link rel="stylesheet" href="css/dashboard-nav.css">
+   <link rel="stylesheet" href="css/dashboard-efficiency.css">
+   <!-- Adding bootsrtap icon and fontawesome icon -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-   <title>Sidebar/Nav</title>
+   <script src="https://kit.fontawesome.com/d972efdfc6.js" crossorigin="anonymous"></script>
+    <!-- Linking the apex charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <title>Dashboard</title>
 
 </head>
 <body>         
-
+   <!-- Navbar and sidebar start -->
    <div class="container-fluid" id="navHeader" style="padding: 0;">
       <nav class="navbar p-4 navbar-expand-lg navbar-light align-content-center" style="background-color: #51A4F1;">
          <button class="btn btn-primary me-lg-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
@@ -22,53 +33,47 @@
                <input class="form-control text-light input-field" type="search" placeholder="Search data" aria-label="Search" style="background-color: #51A4F1;">
             </div>                    
          </form>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end pe-3" id="navbarSupportedContent">
+            <div class="navbar-nav align-items-center" >
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0 align-items-center" >
+                     <li class="nav-item">
+                        <a class="nav-link position-relative"  href="#"> <img src="./img/navMessage.png">
+                           <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger">
+                              8
+                              <span class="visually-hidden">unread messages</span>
+                           </span>
+                        </a>
+                     </li>
 
-            <div class="collapse navbar-collapse justify-content-end pe-3" id="navbarSupportedContent">
-               <div class="navbar-nav align-items-center" >
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav mb-2 mb-lg-0 align-items-center" >
-                        <li class="nav-item">
-                           <a class="nav-link position-relative"  href="#"> <img src="./img/navMessage.png">
-                              <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger">
-                                 8
-                                 <span class="visually-hidden">unread messages</span>
-                               </span>
-                           </a>
-                        </li>
-
-                        <li class="nav-item">
-                           <a class="nav-link" href="#"><img src="./img/navNotify.png"></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <img src="./img/DP8.jpg" class="me-2" style="border-radius: 100%; height: 50px; width: 40px;">
-                           <p class="mb-0 me-5 text-light">Precious</p>
-                           </a>
-                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Log out</a></li>
-                           </ul>
-                        </li>
-                     </ul>
-                  </div>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./img/navNotify.png"></a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./img/DP8.jpg" class="me-2" style="border-radius: 100%; height: 50px; width: 40px;">
+                        <p class="mb-0 me-5 text-light">Precious</p>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <li><a class="dropdown-item" href="#">Log out</a></li>
+                        </ul>
+                     </li>
+                  </ul>
                </div>
             </div>
-         </nav>
-
-         <!-- Contents of the webpage -->
-         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nemo consequuntur asperiores perferendis, laborum, velit dicta deleniti at soluta nobis optio aspernatur amet incidunt tempore a, sapiente dolor possimus voluptatibus.
-         </p>
-
+         </div>  
+      </nav>
    </div>
-            <!-- Contains the side bar menu -->
-   <div class="offcanvas offcanvas-start " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"         id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">   
+   <!-- Navbar end -->
 
+   <!-- Sidebar start -->
+   <div class="offcanvas offcanvas-start " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">   
       <div class="offcanvas-header">
-         <h5 class="offcanvas-title text-center" id="offcanvasScrollingLabel"> <img src="./img/dashHeliumLogo.png" class="w-100">
+         <h5 class="offcanvas-title text-center" id="offcanvasScrollingLabel"> 
+            <img src="./img/dashHeliumLogo.png" class="w-100">
          </h5>
          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -81,9 +86,7 @@
                      <img src="./img/dashboard.png" class="me-3">                           
                      <a href="#" class="ms-2 mb-0 ">Dashboard</a>
                   </div>
-
                   <br>
-
                   <div class="sidenav">
                      <button class="dropdown-btn d-flex align-items-center" >
                         <img src="./img/dashRealTimeInfo.png" class="me-3">
@@ -91,6 +94,7 @@
                         <i class="bi bi-caret-down-fill"></i>
                      </button>
                      <div class="dropdown-container">
+                        <a href="#" class="mb-4 mt-2">Generators</a>
                         <a href="#" class="mb-4 mt-2">Measurement</a>
                         <a href="#" class="mb-4">Wave Form</a>
                         <a href="#" class="mb-4">Analytics</a>
@@ -98,9 +102,7 @@
                         <a href="#" class="mb-4">Map</a>
                      </div>
                   </div>
-
                   <br>
-               
                   <div class=" notifications d-flex align-items-center mt-5 mb-2">
                      <a href="#" class="position-relative"> <img src="./img/dashNotification.png" class="me-3 ms-0">   
                         <span class="position-absolute top-0 start-0 translate-middle p-2 bg-danger border border-light rounded-circle">
@@ -110,19 +112,15 @@
                      </a>
                   </div>
                </div>
-              
                <br>
                <br>
-
                <h6>PREFERENCES</h6>
                <div class="dashContent">
                   <div class=" dashUser mb-2 mt-2 d-flex align-items-center">
                      <img src="./img/dashUser.png" class="me-3">
                      <a href="#">User</a>
                   </div>
-
                   <br>
-
                   <div class=" dashSetting d-flex align-items-center pb-5">
                      <img src="./img/dashSetting.png" class="me-2">
                      <a href="#">Settings</a>
@@ -132,13 +130,236 @@
          </div>
       </div>
    </div>
+   <!-- Sidebar End -->
 
-  
+   <!-- Gabriel's part start-->
    
+   <!-- Gabriel's part End -->
 
-   <script src="./js/dashboard.js"></script>
-   <script src="./js/bootstrap.min.js"></script>
-   
+   <!-- Natacha's part starts-->
 
+   <!-- Natacha's part ends -->
+
+   <!-- Fleet Efficiency starts-->
+   <section id="efficiency" >
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mt-3 mb-2">
+                <div class="card shadow rounded">
+                    <div class="card-body">
+                        <div class="date-row mb-2 d-flex justify-content-between align-items-center">
+                            <h5 style="color: #333333;">Fleet Efficiency</h5>
+                            <div class="position-relative">
+                                <div class="position-absolute" style="top: 9px; left: 3%;">
+                                    <i class="fa-solid fa-calendar-days fa-xl icon-color"></i>
+                                </div>
+                                <select id="efficiency-select" class="icon-color form-select pt-2 pb-2 ps-5" aria-label="Default select example">
+                                    <option value="JANUARY" selected>JANUARY</option>
+                                    <option value="FEBRUARY">FEBRUARY</option>
+                                    <option value="MARCH">MARCH</option>
+                                    <option value="APRIL">APRIL</option>
+                                    <option value="MAY">MAY</option>
+                                    <option value="JUNE">JUNE</option>
+                                    <option value="JULY">JULY</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="efficiency-chart">
+                            
+                        </div>
+                        <div class="details-div text-center">
+                            <a href="" class="see-details text-decoration-none icon-color" style="font-size: 13px;">SEE DETAILS<i class="ps-2 fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-3 mb-2">
+                <div class="card shadow rounded">
+                    <div class="card-body">
+                        <div class="map-text d-flex justify-content-between align-items-center pt-1 pb-1">
+                            <div class="full-screen border d-flex align-items-center justify-content-center pt-2 pb-2" style="width: 40px; border-radius: 50%;">
+                                <i class="bi bi-arrows-fullscreen"></i>
+                            </div>
+                            <h6 class="icon-color">Generator Map Location</h6>
+                            <div class="dropdown">
+                                <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots-vertical fs-5"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">View all Locations</a></li>
+                                  <li><a class="dropdown-item" href="#">View all users</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                        <div class="map pt-4 pb-4">
+                            <div class="row border-top" style="padding-top:20px; padding-bottom:20px;">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="mb-3" id="user1">
+                                        <div class="users d-flex justify-content-between">
+                                            <p class="mb-0 icon-color" style="font-size:15px !important;">Eket</p>
+                                            <p class="mb-0 user-no">21 users</p>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3" id="user2">
+                                        <div class="users d-flex justify-content-between">
+                                            <p class="mb-0 icon-color" style="font-size:15px !important;">Mkpat Enin</p>
+                                            <p class="mb-0 user-no">4 users</p>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3" id="user3">
+                                        <div class="users d-flex justify-content-between">
+                                            <p class="mb-0 icon-color" style="font-size:15px !important;">Oyo</p>
+                                            <p class="mb-0 user-no">10 users</p>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3" id="user4 ">
+                                        <div class="users d-flex justify-content-between">
+                                            <p class="mb-0 icon-color" style="font-size:15px !important;">Ibadan</p>
+                                            <p class="mb-0 user-no">4 users</p>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class=" mb-3" id="user5">
+                                        <div class="users d-flex justify-content-between">
+                                            <p class="mb-0 icon-color" style="font-size:15px !important;">Calabar</p>
+                                            <p class="mb-0 user-no">12 users</p>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Ie-Pkb2oL-kaQg5pwMGmVNOdTUDT9IY&ehbc=2E312F" width="100%" height="250px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+   </section> 
+   <!-- Fleet Efficiency Ends -->
+
+   <!-- Budget Section starts -->
+   <section id="budget-section">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-7 mt-3 mb-3">
+                <div class="card shadow rounded">
+                    <div class="card-body">
+                        <div class="date-row mb-2 d-flex justify-content-between align-items-center">
+                            <h5 style="color: #333333;">Budget</h5>
+                            <div class="w-25">
+                                <select id="budget-select" class="icon-color form-select pt-2 pb-2" aria-label="Default select example">
+                                    <option selected value="Filter">Filter</option>
+                                    <option value="Past-months">Past Months</option>
+                                    <option value="Jan">Jan</option>
+                                    <option value="Feb">Feb</option>
+                                    <option value="Mar">Mar</option>
+                                    <option value="Apr">Apr</option>
+                                    <option value="May">May</option>
+                                    <option value="Jun">Jun</option>
+                                    <option value="Jul">Jul</option>
+                                    <option value="Aug">Aug</option>
+                                    <option value="Sep">Sep</option>
+                                    <option value="Oct">Oct</option>
+                                    <option value="Nov">Nov</option>
+                                    <option value="Dec">Dec</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="budget-chart">
+                            
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-5 mt-3 mb-2">
+                <div class="card shadow rounded">
+                    <div class="card-body">
+                        <div class="row border-top mt-4 mb-4 pb-1">
+                            <div class="col-lg-6">
+                                <div class="generator-alerts pt-2 pb-2 mt-3 mb-3">
+                                    <p><i class="fa-solid fa-circle text-success pe-2"></i>High Temperature</p>
+                                    <p><i class="fa-solid fa-circle text-success pe-2"></i>Low Pressure</p>
+                                    <p><i class="fa-solid fa-circle text-success pe-2"></i>Low oil Level</p>
+                                    <p><i class="fa-regular fa-circle icon-color pe-2"></i>Low Level</p>
+                                    <p><i class="fa-solid fa-circle text-primary pe-2"></i>Maintenance Requested</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="temp d-flex pt-2">
+                                    <div class="svg">
+                                        <i class="bi bi-thermometer-half fs-2"></i>
+                                    </div>
+                                    <div class="temp-text">
+                                        <p class="mb-0">Coolant Temperature</p>
+                                        <p>51.0 oC</p>
+                                    </div>
+                                </div>
+                                <div class="pressure d-flex pt-2">
+                                    <div class="svg pe-2">
+                                        <img src="img/icons8-engine-oil-50.png" alt="" class="w-100">
+                                    </div>
+                                    <div class="temp-text">
+                                        <p class="mb-0">Oil Pressure</p>
+                                        <p>4.5 Bar</p>
+                                    </div>
+                                </div>
+                                <div class="fuel d-flex pt-2">
+                                    <div class="svg pe-2">
+                                        <img src="img/icons8-gas-station-30.png" alt="" class="w-100">
+                                    </div>
+                                    <div class="temp-text">
+                                        <p class="mb-0">Fuel</p>
+                                        <p>32.2%</p>
+                                    </div>
+                                </div>
+                                <div class="battery d-flex pt-2">
+                                    <div class="svg pe-2">
+                                        <img src="img/icons8-car-battery-50.png" alt="" class="w-100">
+                                    </div>
+                                    <div class="temp-text">
+                                        <p class="mb-0">Battery Level</p>
+                                        <p>25.2 V</p>
+                                    </div>
+                                </div>
+                                <div class="hours d-flex pt-2">
+                                    <div class="svg pe-2">
+                                        <img src="img/icons8-temperature-50.png" alt="" class="w-100">
+                                    </div>
+                                    <div class="temp-text">
+                                        <p class="mb-0">Running Hours</p>
+                                        <p>309 h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Budget section ends -->
+
+
+   <script src="js/dashboard-nav.js"></script>
+   <script src="js/dashboard-efficiency.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
