@@ -1,5 +1,5 @@
 
-var options = {
+var options1 = {
   series: [2, 3],
   chart: {
   type: 'donut',
@@ -23,10 +23,10 @@ responsive: [{
 }]
 };
 
-var chart = new ApexCharts(document.querySelector("#generator-chart"), options);
+var chart = new ApexCharts(document.querySelector("#generator-chart"), options1);
 chart.render();
 
-var options = {
+var options2 = {
   series: [1, 5],
   chart: {
   type: 'donut',
@@ -50,7 +50,7 @@ responsive: [{
 }]
 };
 
-var chartwo = new ApexCharts(document.querySelector("#renewable-chart"), options);
+var chartwo = new ApexCharts(document.querySelector("#renewable-chart"), options2);
 chartwo.render();
 
 
@@ -89,7 +89,7 @@ function onChangeGenerator (event){
   })
   chartwo.updateOptions({
     series: [6, 3],
-    colors:['#154360', '#943126']
+    colors:['#7900FF', '#FC5404']
   })
   }
 
@@ -100,7 +100,7 @@ function onChangeGenerator (event){
   })
   chartwo.updateOptions({
     series: [5, 3],
-    colors:['#EB984E', '#A04000']
+    colors:['#FFD36E', '#06FF00']
   })
   }
   else if (eventValue === "May"){
@@ -110,7 +110,7 @@ function onChangeGenerator (event){
   })
   chartwo.updateOptions({
     series: [7, 6],
-    colors:['#78281F', '#A04000']
+    colors:['#00FFC6', '#F55353']
   })
   }
 
@@ -121,7 +121,7 @@ function onChangeGenerator (event){
   })
   chartwo.updateOptions({
     series: [9, 4],
-    colors:['#154360', '#145A32']
+    colors:['#F7EC09', '#4700D8']
   })
   }
 
@@ -132,7 +132,7 @@ function onChangeGenerator (event){
   })
   chartwo.updateOptions({
     series: [1, 4],
-    colors:['#154360', '#145A32']
+    colors:['#F637EC', '#A91079']
   })
   
 }
