@@ -16,6 +16,7 @@
    <link rel="stylesheet" href="css/dashboard-info.css">
    <link rel="stylesheet" href="css/dashboard-efficiency.css">
    <link rel="stylesheet" href="css/dashboard-stats.css">
+   <link rel="stylesheet" href="./css/dashboard-issues.css">
    <!-- Adding bootsrtap icon and fontawesome icon -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
@@ -530,11 +531,197 @@
   </section>
   <!-- Budget section ends -->
 
+  <!-- Dashboard issues begin-->
+
+  <section id="issues-overview" class="d-flex align-items-md-center">
+    <div class="container bg-white control-container">
+        <div class="row mb-5 border-bottom">
+          <div class="col-md-8">
+            <div class="d-flex justify-content-between">
+              <div class="col-sm-3 col-md-3">
+                <div class="image">
+                  <img src="./img/arrows-out-cardinal-fill-svgrepo-com.svg" alt="" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-8 o-text">
+                <p class="">Overview of Power Source with issues</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-lg-end justify-content-sm-center">
+              <div class="input-group input-group-sm me-lg-5"> 
+                <input type="text" class="form-control formidable rounded-pill" id="myInput" onkeyup="myFunction()" aria-label="Sizing example input" placeholder="search data" aria-describedby="inputGroup-sizing-sm">
+                <span><div class="dot-0 d-flex flex-column py-2 ms-lg-2 d-none d-md-block d-lg-block">
+                  <div class="click-s "></div>
+                  <div class="click-s"></div>
+                  <div class="click-s"></div>
+                </div></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-borderless" id="myTable">
+            <thead class="text-center">
+              <tr>
+                <th>Type</th>
+                <th scope="col">ID</th>
+                <th scope="col">Alert</th>
+                <th scope="col">Time</th>
+                <th scope="col">Severity</th>
+                <th scope="col">Status</th>
+                <th>Action</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>Diesel Gen</td>
+                <td>101</td>
+                <td>High Temperature</td>
+                <td>2021-05-16 08:00:24</td>
+                <td><div class="critical-box">
+                  <div class="critical var-box">
+                    Critical
+                  </div>
+                </div></td>
+                <td><div class="critical-box">
+                  <div class="online status var-box">
+                    online
+                  </div>
+                </div></td>
+                <td class="pointer shutdown1">shutdown</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Petrol Gen</td>
+                <td>101</td>
+                <td>Low Pressure</td>
+                <td>2021-05-16 08:00:24</td>
+                <td><div class="critical-box">
+                  <div class="critical var-box">
+                  Critical
+                </div>
+                </div></td>
+                <td><div class="critical-box">
+                  <div class="online status var-box">
+                    online
+                  </div>
+                </div></td>
+                <td class="pointer shutdown1">shutdown</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Petrol Gen</td>
+                <td>102</td>
+                <td>Low fuel</td>
+                <td>2021-05-16 08:00:24</td>
+                <td>
+                  <div class="critical-box">
+                    <div class="warning var-box">
+                      Warning
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="critical-box">
+                    <div class="offline status var-box">offline</div>
+                  </div>
+                </td>
+                <td class="pointer shutdown1">restart</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Diesel Gen</td>
+                <td>103</td>
+                <td>Battery not charging</td>
+                <td>2021-05-16 08:00:24</td>
+                <td><div class="critical-box">
+                  <div class="warning var-box">
+                    Warning
+                  </div>
+                </div></td>
+                <td><div class="critical-box">
+                  <div class="offline status var-box">
+                    offline
+                  </div>
+                </div></td>
+                <td class="pointer shutdown1">restart</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Utility</td>
+                <td>100</td>
+                <td>Disconnected</td>
+                <td>2021-05-16 08:00:24</td>
+                <td><div class="critical-box">
+                  <div class="warning var-box">
+                    Warning
+                  </div>
+                </div></td>
+                <td><div class="critical-box">
+                  <div class="offline status var-box">
+                    offline
+                  </div>
+                </div></td>
+                <td class="pointer shutdown1">restart</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Petrol Gen</td>
+                <td>104</td>
+                <td>Low oil pressure</td>
+                <td>2021-05-16 08:00:24</td>
+                <td><div class="critical-box">
+                  <div class="critical var-box">
+                    Critical
+                  </div>
+                </div>
+                <td><div class="critical-box">
+                  <div class="offline status var-box">
+                    offline
+                  </div>
+                </div></td>
+                <td class="pointer shutdown1">maintenance</td>
+                <td class="dot-box d-flex align-items-center py-3">
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                  <div class="clicking"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</section>
+
 
    <script src="js/dashboard-nav.js"></script>
    <script src="js/dashboard-info.js"></script>
    <script src="js/dashboard-efficiency.js"></script>
    <script src="js/dashboard-stats.js"></script>
+   <script src="./js/dashboard-issues.js"></script>
    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
