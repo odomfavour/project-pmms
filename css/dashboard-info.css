@@ -1,0 +1,76 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'roboto';
+}
+
+.card {
+    border: none;
+}
+
+.orange-bg{
+    background: linear-gradient(270deg, #FFCB9A 0%, #EE7808 100%);
+    border-radius: 4px;
+} 
+.purple-bg{
+    background: linear-gradient(90deg, #8262FF 50%, #B19DFF 103.15%);
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+} 
+
+.bg-alarm, .bg-pie {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(37, 51, 66, 0.15);
+    border-radius: 8px;
+}
+
+.chilling{
+    background: #D3F9D8;
+    border-radius: 6px;
+}
+
+.lh-1 {
+    line-height: 0.5 !important;
+}
+
+.circle-div{
+    background: #8CE99A;
+    width: 80px;
+    height: 80px;
+}
+.small{
+    background: #51CF66;
+    width: 50px;
+    height: 50px;
+}
+
+.alarm{
+    color: #F7685B;;
+}
+
+.alarm-two{
+    color: #FFB946;
+}
+.input-group-text {
+     background-color: #FFFFFF;
+}
+.text-div {
+    font-weight: 500;
+}
+.gen {
+    font-size:12px;
+}
+
+.apexcharts-tooltip {
+    background: #f3f3f3;
+    color: orange;
+}
+ 
+
+
+
+
+

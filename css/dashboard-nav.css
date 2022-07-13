@@ -1,0 +1,173 @@
+.btn-primary{
+   height: 45px!important;
+   width: 55px!important;
+   margin-bottom: 10px !important;
+   background-color: #51A4F1!important;
+   border-color: #51A4F1!important;
+   box-shadow: 0px  1px 1px 1px grey!important;
+}
+
+.navbar-toggler{
+   box-shadow: 0px  1px 1px 1px grey!important;
+   height: 45px!important;
+   margin-bottom: 10px;
+}
+.search-bar i {
+   position: absolute;
+   padding-left: 10px;
+   padding-top: 10px;
+   color: #fff;
+}
+ 
+.search-bar {
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.input-field {
+   width: 100%;
+   padding: 10px;
+   text-align: left;
+   padding-left: 35px;
+}
+
+#sidebar {
+   height: 100%;
+   text-align: left;
+   color: black;
+   padding: 15px;
+}
+
+#sidebar h6{
+   color: #868E96;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 16px
+}
+
+.dashContent{
+   align-items: flex-end;
+   padding-left: 10px;
+   padding-top: 10px;
+}
+
+.dashBoard {
+   padding: 10px 20px;
+   width: 240px;
+   height: 48px;
+   border-radius: 16px;
+   background: rgba(0, 133, 255, 0.1);
+}
+
+.dashBoard a {
+   text-decoration: none;
+   color: #262626;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;   
+}
+
+
+.dashUser, .dashSetting, .notifications{
+   font-size: 20px;
+   padding-left: 30px;
+   text-decoration: none;
+   color: #262626;
+}
+
+.dashContent a{
+   text-decoration: none;
+   color: #262626;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+}
+
+ .dropdown-btn {
+   padding: 8px 6px 16px;
+   padding-left: 30px; 
+   border: none;
+   background: none;
+   width: 100%;
+   cursor: pointer;
+   outline: none; 
+}
+
+ .sidenav a{
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: left;
+   text-decoration: none;
+   color:  rgba(0, 0, 0, 0.6);
+   display: block;
+   cursor: pointer;
+   align-items: center;
+ }
+ 
+
+ .sidenav .dropdown-container a:hover {
+color: #262626;
+background: linear-gradient(270deg, rgba(0, 133, 255, 0.4) -13.6%, rgba(0, 133, 255, 0.200657) 24.28%, rgba(0, 133, 255, 0) 50%);
+padding: 10px;
+}
+
+.dropdown-btn:hover{
+   color: #262626;
+   background: linear-gradient(270deg, rgba(0, 133, 255, 0.4) -13.6%, rgba(0, 133, 255, 0.200657) 24.28%, rgba(0, 133, 255, 0) 50%);
+}
+
+.dropdown-container {
+display: none;
+background-color: rgba(230, 225, 230, 0.067);
+padding-left: 70px;
+}
+
+.dropdown-arrow {
+   position: absolute;
+   padding: 8px 6px 16px;
+   padding-left: 30px; 
+   border: none;
+   background: none;
+   width: 100%;
+   cursor: pointer;
+   outline: none; 
+}
+
+::placeholder{
+   color: #fff!important;
+   text-align: left!important;
+   display: block;
+   font-weight: 400;
+   padding-left: 5px;
+}
+
+.offcanvas-start {
+   width: 325px!important;
+}
+@media (max-width:885px) {
+   #navHeader{
+      width: 100%!important;
+   }
+  
+   .input-icon i {
+      position: absolute;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-right: 20px;
+   }
+   .navbar-nav {
+      align-items: flex-start!important;
+   }
+}
+
+
+ 
